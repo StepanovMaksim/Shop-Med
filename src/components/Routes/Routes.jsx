@@ -11,6 +11,7 @@ import SingleCategory from "../Categories/SingleCategory";
 import Cart from "../Cart/Cart";
 
 const AppRoutes = () => (
+<<<<<<< HEAD
 	<Routes>
 		<Route index element={<Home />} />
 		<Route path='/Shop-Med' element={<Home />} />
@@ -21,5 +22,16 @@ const AppRoutes = () => (
 		<Route path={ROUTES.CART} element={<Cart />} />
 	</Routes>
 )
+=======
+  <Routes>
+    <Route index element={<Home />} />
+    <Route path='/Shop-Med' element={<Home />} />
+    <Route path={ROUTES.PRODUCT} element={<SingleProduct />} />
+    <Route path={ROUTES.PROFILE} element={<Profile />} />
+    <Route path={ROUTES.CATEGORY} element={<SingleCategory />} />
+    <Route path={ROUTES.CART} element={<Cart />} />
+  </Routes>
+);
+>>>>>>> cb7cdfd36d50ad76bcd99c1b6d1b118f6ee07bda
 
 export default AppRoutes;
