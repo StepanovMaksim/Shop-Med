@@ -1,4 +1,10 @@
-[
+import React from 'react'
+
+
+
+
+
+const tovar = [
 	{
 		"id": 1,
 		"title": "Халат хирургический стерильный Серия: ПРЕМЬЕР",
@@ -168,3 +174,9 @@
 		"images": ["", "", ""]
 	}
 ]
+
+export const Robe = () => {
+  return (
+	<div>{tovar}</div>
+  )
+}
