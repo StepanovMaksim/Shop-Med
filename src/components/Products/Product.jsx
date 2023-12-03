@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-
+import image1 from '../../images/robe/id1.jpg'
 import { ROUTES } from "../../utils/routes";
 
 import styles from "../../styles/Product.module.css";
@@ -29,68 +29,68 @@ const Product = (item) => {
   };
 
   return (
-    <section className={styles.product}>
-      <div className={styles.images}>
-        <div
-          className={styles.current}
-          style={{ backgroundImage: `url(${currentImage})` }}
-        />
-        <div className={styles["images-list"]}>
-          {images.map((image, i) => (
-            <div
-              key={i}
-              className={styles.image}
-              style={{ backgroundImage: `url(${image})` }}
-              onClick={() => setCurrentImage(image)}
-            />
-          ))}
-        </div>
-      </div>
-      <div className={styles.info}>
-        <h1 className={styles.title}>{title}</h1>
-        <div className={styles.price}>{price}$</div>
-        <div className={styles.color}>
-          <span>Color:</span> Green
-        </div>
-        <div className={styles.sizes}>
-          <span>Sizes:</span>
+		<section className={styles.product}>
+			<div className={styles.images}>
+				<div
+					className={styles.current}
+					style={{ backgroundImage: `url(${image1})` }}
+				/>
+				<div className={styles['images-list']}>
+					{images.map((image, i) => (
+						<div
+							key={i}
+							className={styles.image}
+							style={{ backgroundImage: `url(${image1})` }}
+							onClick={() => setCurrentImage(image1)}
+						/>
+					))}
+				</div>
+			</div>
+			<div className={styles.info}>
+				<h1 className={styles.title}>{title}</h1>
+				<div className={styles.price}>{price}$</div>
+				<div className={styles.color}>
+					<span>Color:</span> Green
+				</div>
+				<div className={styles.sizes}>
+					<span>Sizes:</span>
 
-          <div className={styles.list}>
-            {SIZES.map((size) => (
-              <div
-                onClick={() => setCurrentSize(size)}
-                className={`${styles.size} ${
-                  currentSize === size ? styles.active : ""
-                }`}
-                key={size}
-              >
-                {size}
-              </div>
-            ))}
-          </div>
-        </div>
+					<div className={styles.list}>
+						{SIZES.map(size => (
+							<div
+								onClick={() => setCurrentSize(size)}
+								className={`${styles.size} ${
+									currentSize === size ? styles.active : ''
+								}`}
+								key={size}
+							>
+								{size}
+							</div>
+						))}
+					</div>
+				</div>
 
-        <p className={styles.description}>{description}</p>
-        <div className={styles.actions}>
-          <button
-            onClick={addToCart}
-            className={styles.add}
-            disabled={!currentSize}
-          >
-            Добавить в корзину
-          </button>
-          
-          <button className={styles.favourite}>Добавить в закладки</button>
-        </div>
+				<p className={styles.description}>{description}</p>
+				<div className={styles.actions}>
+					<button
+						onClick={addToCart}
+						className={styles.add}
+						disabled={!currentSize}
+					>
+						Добавить в корзину
+					</button>
 
-        <div className={styles.bottom}>
-          <div className={styles.purchase}>19 people purchased</div>
+					<button className={styles.favourite}>Добавить в закладки</button>
+				</div>
 
-          <Link to={ROUTES.HOME}>Вернуться на главную</Link>
-        </div>
-      </div>
-    </section>
-  );
+				<div className={styles.bottom}>
+					<div className={styles.purchase}>19 people purchased</div>
+
+					<Link to={ROUTES.HOME}>Вернуться на главную</Link>
+				</div>
+			</div>
+		</section>
+	)
 };
 
 export default Product;

@@ -14,6 +14,8 @@
   background: var(--bg);
   border-radius: 8px;
   overflow: hidden;
+  display: flex;
+  align-items: stretch;
   width: calc(100% / 5 - 20px);
 }
 
@@ -23,7 +25,7 @@
 
 .image {
   width: 100%;
-  height: 410px;
+  height: 310px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,20 +35,20 @@
   padding: 12px;
   display: flex;
   flex-direction: column;
-  height: calc(100% - 410px);
 }
 
 .title {
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
+  color: black
 }
 
 .cat {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: var(--grey);
+  color: black;
   text-transform: uppercase;
   margin-top: 5px;
   margin-bottom: 28px;
@@ -68,7 +70,8 @@
 .price {
   font-weight: 700;
   font-size: 20px;
-  line-height: 24px;
+  display: flex;
+  justify-content: flex-end;
   color: var(--violet-dark);
 }
 
