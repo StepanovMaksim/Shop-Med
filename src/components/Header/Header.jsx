@@ -43,13 +43,13 @@ const Header = () => {
       <Link to={ROUTES.HOME} className={styles.info}>
         ЛОГОТИП
       </Link>
-			<Link to={ROUTES.HOME} className={styles.info}>
+			<Link to={ROUTES.INFO} className={styles.info}>
 				О нас
 			</Link>
 			<Link to={ROUTES.HOME} className={styles.info}>
 				Магазин
 			</Link>
-			<Link to={ROUTES.HOME} className={styles.info}>
+			<Link to={ROUTES.CONTACTS} className={styles.info}>
 				Контакты
 			</Link>
 			<div className={styles.info}>

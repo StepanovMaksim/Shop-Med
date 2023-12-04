@@ -15,8 +15,9 @@
   border-radius: 8px;
   overflow: hidden;
   display: flex;
-  align-items: stretch;
+  align-items: flex-end;
   width: calc(100% / 5 - 20px);
+  height: 320px;
 }
 
 .product:nth-child(5n) {
@@ -51,7 +52,7 @@
   color: black;
   text-transform: uppercase;
   margin-top: 5px;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 
 .info {

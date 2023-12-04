@@ -7,7 +7,7 @@ import { robeObj } from "../Robe/Robe";
 
 const Products = ({ title, style = {}, products = [], amount }) => {
   const list = robeObj;
-  console.log(robeObj[1].category.image)
+
 
   return (
 		<section className={styles.products} style={style}>
@@ -18,6 +18,7 @@ const Products = ({ title, style = {}, products = [], amount }) => {
 					({
 						id,
 						category: { image: images },
+						series,
 						title,
 						category: { name: cat },
 						price,
@@ -27,6 +28,7 @@ const Products = ({ title, style = {}, products = [], amount }) => {
 							<div className={styles.wrapper}>
 								<img src={images} />
 								<h3 className={styles.title}>{title}</h3>
+								<h3 className={styles.title}>{series}</h3>
 								<div className={styles.cat}>{cat}</div>
 								<div className={styles.price}>{price} руб.</div>
 							</div>
